@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap');
+@import "colors.css";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 90vh;
+    background: #02131d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    font-weight: 400;
+    color: var(--back-light1);
+    padding: 20px;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.compass-round{
+    width: 450px;
+    height: 450px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--back-med);
+    border-top: 3px solid var(--back-light1);
+    background: #0c6c7c;
+    border-radius: 50%;
+    margin: 20px;
+    /* animation: circle-static 2s linear infinite; */
+}
+
+.compass-round img{
+    position:absolute;
+    height: 385px;
+    width: 385px;
+    border-radius: 50%;
+    transition: transform 0.1s ease;
+}
+
+.indicator{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: var(--back-light1);
+    border-radius: 50%;
+    animation: circle 5s linear infinite;
+}
+
+.ind-heading{
+    background: #1ce52a;
+    animation: circle 2s linear infinite;
+}
+
+.ind-waypoint{
+    background: #ff0066;
+    animation: circle 3s linear infinite;
+}
+
+.compass-graph{
+    width: 200px;
+    height: 450px;
+    /* border: 3px solid var(--back-med); */
+    margin: 20px;
+    position: relative;
+}
+
+.circle{
+    width: 200px;
+    height: 200px;
+    border: 3px solid var(--back-med);
+    margin-bottom: 25px;
+}
+
+@keyframes circle {
+    0%{
+        transform: rotate(0deg)translate(-225px);
+    }
+    100%{
+        transform: rotate(360deg)translate(-225px)
+    }
+}
+
+@keyframes circle-static {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
